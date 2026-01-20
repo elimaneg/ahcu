@@ -1,18 +1,17 @@
-#$ curl -O https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/oc-mirror.tar.gz
-#$ tar -xvf oc-mirror.tar.gz
-#$ chmod +x ./oc-mirror
-#$ sudo mv ./oc-mirror /usr/local/bin/
-
-# https://openshift-channels.robszumski.com/
-
-## Flow mirror-ro-mirror
+$ curl -O https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/oc-mirror.tar.gz
+$ tar -xvf oc-mirror.tar.gz
+$ chmod +x ./oc-mirror
+$ sudo mv ./oc-mirror /usr/local/bin/
 
 # Exemples:
- # sync de la release 4.19
- - bash mirrorToMirror-flow 4.19 dev release
+ # Flow full deconnecte (0-0) mirror-to-disk: sync de la release 4.19 sur le disk
+ - bash ./flow-0-0-mirrorToDisk 4.19 dev release
 
- # sync des operateurs de 4.19
- - bash mirrorToMirror-flow 4.19 dev operator
+ # Flow full deconnecte (0-1) disk-to-mirror: sync de la release 4.19 depuis le disk vers le registre mirroir
+ - bash ./flow-0-1-diskToMirror 4.19 dev release
 
- # sync des operateurs de 4.20
- - bash mirrorToMirror-flow 4.20 dev operator
+ # Flow semi deconnecte: sync de la release 4.19 depuis le mirroir de redhat vers le registre mirroir (deconnecte)
+ - bash ./flow-mirrorToMirror 4.19 dev release
+
+ # Flow semi deconnecte: sync des operateurs de 4.19 depuis le mirroir de redhat vers le registre mirroir (deconnecte)
+ - bash ./flow-mirrorToMirror 4.19 dev operator

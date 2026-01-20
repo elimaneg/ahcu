@@ -1,0 +1,48 @@
+#!/bin/bash
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+declare _HOME=$(cd -P $(dirname $0) && pwd)
+
+REGISTRY=artifactorye.home.local:443
+REGISTRY_NS=gitops
+
+OCMIRROR=oc-mirror
+OCMIRROR_FLAGS="--v2"
+DATA_DIR="${_HOME}/data"
+OC_MIRROR_DIR="${DATA_DIR}/oc-mirror"
+
+_ENVS="lab|dev|qa|prd"
+_TYPES="operator|release"
+
+_VERSION=$1 # 4.x
+_SENV=$2
+_TYPE=$3
+
+[[ "${_VERSION}" = "" || "${_SENV}" = "" || "${_TYPE}" = "" ]] && \
+echo "Usage: $0 4.x Environnement Type" && \
+echo "Environnement: ${_ENVS}" && \
+echo "Type: ${_TYPES}" && \
+echo -en "Exemples:\n $0 4.19 dev release\n $0 4.19 dev operator\n" && exit 1
+
+echo $_SENV|grep -Eqw ${_ENVS}
+[[ $? -ne 0 ]] && echo "\"${_SENV}\" est un environement invalide. Choisir entre ${_ENVS}" && exit 1
+
+echo $_TYPE|grep -Eqw ${_TYPES}
+[[ $? -ne 0 ]] && echo "\"${_TYPE}\" est un environement invalide. Choisir entre ${_TYPES}" && exit 1
+
+#DATA_WORKSPACE=${DATA_DIR}/${VERSION}
+#GIT_WORKSPACE=${_HOME}/../${_VERSION}/${_SENV}
+OCMIRROR_WORKSPACE=${_HOME}/${_VERSION}/${_SENV}
+IMAGESET="${_HOME}/${_VERSION}/${_TYPE}.yaml"
+
+[[ ! -f ${IMAGESET} ]] && echo "Imposible d'acceder a ${IMAGESET}" && exit 1
+[[ "${REGISTRY}" = "" ]] && echo "Definir REGISTRY" && exit 1
+[[ "${REGISTRY_NS}" = "" ]] && echo "Definir REGISTRY_NS" && exit 1
+
+mkdir -p ${OCMIRROR_WORKSPACE}
+[[ $? -ne 0 ]] && echo "Erreur creation repertoire ${OCMIRROR_WORKSPACE}" && exit 1
+
+echo "${OCMIRROR} ${OCMIRROR_FLAGS} --config=${IMAGESET} --workspace file://${OCMIRROR_WORKSPACE} docker://${REGISTRY}/${REGISTRY_NS}/${_SENV}"
+
+${OCMIRROR} ${OCMIRROR_FLAGS} --config=${IMAGESET} --workspace file://${OCMIRROR_WORKSPACE} docker://${REGISTRY}/${REGISTRY_NS}/${_SENV}

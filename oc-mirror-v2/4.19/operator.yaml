@@ -1,0 +1,31 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: registry.redhat.io/redhat/certified-operator-index:v4.19
+    packages:
+      - name: vault-secrets-operator
+  - catalog: registry.redhat.io/redhat/community-operator-index:v4.19
+    packages:
+    - name: group-sync-operator
+    - name: namespace-configuration-operator
+    - name: nfs-provisioner-operator
+  - catalog: registry.redhat.io/redhat/redhat-marketplace-index:v4.19
+    packages:
+    - name: flux
+  - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.19
+    packages:
+    - name: rhbk-operator
+    - name: advanced-cluster-management
+    - name: cincinnati-operator
+    - name: external-dns-operator
+    - name: local-storage-operator
+    - name: metallb-operator
+    - name: multicluster-engine
+    - name: openshift-gitops-operator
+      # channels:
+      # - name: latest
+    - name: redhat-oadp-operator
+    - name: rhacs-operator
+    - name: volsync-product
+    - name: lvms-operator

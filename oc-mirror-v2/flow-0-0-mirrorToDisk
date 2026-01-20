@@ -1,0 +1,38 @@
+#!/bin/bash
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+declare _HOME=$(cd -P $(dirname $0) && pwd)
+
+OCMIRROR=oc-mirror
+OCMIRROR_FLAGS="--v2"
+
+_ENVS="lab|dev|qa|prd"
+_TYPES="operator|release"
+
+_VERSION=$1 # 4.x
+_SENV=$2
+_TYPE=$3
+
+[[ "${_VERSION}" = "" || "${_SENV}" = "" || "${_TYPE}" = "" ]] && \
+echo "Usage: $0 4.x Environnement Type" && \
+echo "Environnement: ${_ENVS}" && \
+echo "Type: ${_TYPES}" && \
+echo -en "Exemples:\n $0 4.19 dev release\n $0 4.19 dev operator\n" && exit 1
+
+echo $_SENV|grep -Eqw ${_ENVS}
+[[ $? -ne 0 ]] && echo "\"${_SENV}\" est un environement invalide. Choisir entre ${_ENVS}" && exit 1
+
+echo $_TYPE|grep -Eqw ${_TYPES}
+[[ $? -ne 0 ]] && echo "\"${_TYPE}\" est un environement invalide. Choisir entre ${_TYPES}" && exit 1
+
+OCMIRROR_WORKSPACE=${_HOME}/${_VERSION}/${_SENV}
+IMAGESET="${_HOME}/${_VERSION}/${_TYPE}.yaml"
+
+[[ ! -f ${IMAGESET} ]] && echo "Imposible d'acceder a ${IMAGESET}" && exit 1
+
+mkdir -p ${OCMIRROR_WORKSPACE}
+[[ $? -ne 0 ]] && echo "Erreur creation repertoire ${OCMIRROR_WORKSPACE}" && exit 1
+
+echo "${OCMIRROR} ${OCMIRROR_FLAGS} --config=${IMAGESET} file://${OCMIRROR_WORKSPACE}"
+${OCMIRROR} ${OCMIRROR_FLAGS} --config=${IMAGESET} file://${OCMIRROR_WORKSPACE}

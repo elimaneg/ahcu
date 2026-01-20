@@ -1,0 +1,18 @@
+#$ curl -O https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/oc-mirror.tar.gz
+#$ tar -xvf oc-mirror.tar.gz
+#$ chmod +x ./oc-mirror
+#$ sudo mv ./oc-mirror /usr/local/bin/
+
+# https://openshift-channels.robszumski.com/
+
+## Flow mirror-ro-mirror
+
+# Exemples:
+ # sync de la release 4.19
+ - bash mirrorToMirror-flow 4.19 dev release
+
+ # sync des operateurs de 4.19
+ - bash mirrorToMirror-flow 4.19 dev operator
+
+ # sync des operateurs de 4.20
+ - bash mirrorToMirror-flow 4.20 dev operator

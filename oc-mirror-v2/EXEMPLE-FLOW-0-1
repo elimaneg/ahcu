@@ -1,0 +1,228 @@
+$ bash ./flow-0-1-diskToMirror 4.19 dev release
+FROM = /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/mirror_000001.tar
+oc-mirror --from file:///home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/ --config=/home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/release.yaml --v2 docker://artifactorye.home.local:443/gitops/dev
+2026/01/20 17:50:36  [INFO]   : 👋 Hello, welcome to oc-mirror
+2026/01/20 17:50:36  [INFO]   : ⚙️  setting up the environment for you...
+2026/01/20 17:50:36  [INFO]   : ⚙️  environment version: 4.20.0-202510221121.p2.gb51b46d.assembly.stream.el9-b51b46d
+2026/01/20 17:50:36  [INFO]   : 🔀 workflow mode: diskToMirror 
+2026/01/20 17:50:36  [INFO]   : Verified we can authenticate against registry "artifactorye.home.local:443/gitops/dev"
+2026/01/20 17:50:36  [INFO]   : 📦 Extracting mirror archive(s)...
+/home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/mirror_000001.tar (22.0 GiB / 22.0 GiB) [===========================================================================================================================] 15s
+2026/01/20 17:50:51  [INFO]   : 🕵  going to discover the necessary images...
+2026/01/20 17:50:51  [INFO]   : 🔍 collecting release images...
+2026/01/20 17:50:51  [INFO]   : 🔍 collecting operator images...
+2026/01/20 17:50:51  [INFO]   : 🔍 collecting additional images...
+2026/01/20 17:50:51  [INFO]   : 🔍 collecting helm images...
+2026/01/20 17:50:51  [INFO]   : 🚀 Start copying the images...
+2026/01/20 17:50:51  [INFO]   : 📌 images to copy 191 
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:071818be4872e5cbc97f49cf91b8311cedb31e32c46f3a9db511e68b8005c357 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:05503d61a92c392ca565e1b81058575d78b72791f48d2a507fb7ef1eeff7733f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:0bc63ef22cfdbb405c014291b87257cba3ee9a4b3ae9f3131d30f96fb89c5631 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:05bf8b8800c292f05f9b7c9424e41449eb6a0e591c5c1129a1526572161bda83 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:0c06f097153ca1adb957ac0e72d0d2a29d9f6c04560c7f911bfc26ee28e2ddf7 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:0e78312e4b3372ceb5679d419936fe374da06b0b1786e6227a4bd58f3290c6f9 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (4s)  ocp-v4.0-art-dev@sha256:02f12ec561ccc4ff7f79edbb5e024a79db2d8961fd7f87ca8b9382900a955946 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:0db4d9a529725f34795fbd52fa377600b830a4cf65a223c2f9ca29e0a1d257f7 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:0e4654368f7dbc4e0808df96a3d1f85b3130185f5ba3523707980728d13fae43 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:147ca265ce241366869cc581236c37bf7a75950c8c6fc6adfb12c12ee5f15046 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:17db15aa512ad60f0aeb55f97eef1659f06d8ce14547aa7f261202cfecbcdb49 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:121137c2fca7ca0869839eaf226b6738ec9b5b71ed65f62123bc05f31c955490 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:18fe40c0342a1c45a82a758800c370628406f93716ac441dbbbb92461c3179b3 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:193ec3a72fae51088e69cbebc45770ba1fc9c7f029179b20ee6f4c58e6d2241d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:196d347943505845b78dcdbcfcbd198e0d490b5381f355eebacd02c3bedaa7e3 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (5s)  ocp-v4.0-art-dev@sha256:0e860aebbe4f6164221dde1d291d14264a6cc78a1887a20814f84a06ca0f7007 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:1e47314161c171594ed39e5909df10c74114b7d4694846f2c53f5a302112cb57 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:1e62dc9f8288e41d92eb29d07e484bb9882f5d88f7b8c0e9743be3c49ccf7e89 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:1f173b725354249452a07ed0a4529e1bae980e7cf2c2e4d98a8a749aa0e15ba3 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (3s)  ocp-v4.0-art-dev@sha256:1b5f992fd340b90212058a86809d4bfed4f64ca82418d1cf6e4c082e2f3bc7b5 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:20313975444a4f5c31471c5aa3ed112baacdfa00bdecb5bbd98cc3a2ed067032 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (3s)  ocp-v4.0-art-dev@sha256:1b80afda6f41d640b74bd07f7d5fd48a1ece19516787ac6831b9e80025e5c450 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (3s)  ocp-v4.0-art-dev@sha256:1c1a18744f1694ef790f5a88cb7dc3e43d1cb1f6819766027647f2b81273f776 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:207e56c7e3c525c58963ee835c3775fec9da87d052071c3072ebaa5986e51791 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:1ff2432640972aaa2bbf6c65df60628de99679978b643c70a3106df384bb967f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:2288ef6f1959b306b58b622a17e93f1f05072603a09af688d0e0dc23309fc7ac ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:2505208313a8312684198b6996447d25406e6ee6f1d088583a743297dfdc5734 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:20ecc3cca7d894a3463a4b1632f2b2498d468eb78145eccc7d9393acce3e446f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:22f6f21f75503e0cd80a1415718d2db31943530c94fd73f6a50c46f4db4c8f2c ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:27d90310b799702b2369b6bafe3539fe105aaa3b34a42e7e6fd0b75a334bed69 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:2dd4c9a071d0d20f328d5d53f7b8e870a736b4dd340142fdfc3379924c2cfa2d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (3s)  ocp-v4.0-art-dev@sha256:23215a0695ecf3a47aa44488b992844ac05f05dac20242a8f9e6e1aa2ad43ecf ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:303ee2bf54730768a094ec04026f2e720af93beeaaf582b4b564bc7c4b2fa04a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:313e92e9d17d2946a172a068cb2dc38b088e455c3869bd9bdf4e329cfc208ba8 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:2e054157f078b15191bfe376e9025f9720df1dabd04485d924a42c01e4a2c4ff ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:30684c3b48fb8e71fde18e33b9c87f4475264d34dd94fb9c6e1af7d4d9b0fe26 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:36ad44e2a0ccbb97888b75ab823616da6aa8ba09ac3674a12e85241d89b025b1 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:3b197734ccbb42730ea0deee30b5292d2423de9119bfbe27668d11217fe69943 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:3b309afc36be910faddd48badaa3d44371a56169ad6fa6b1cb305f4009779e7b ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:2ea09444bbe02175382c30ac56b784e4340185604fd5231d1e2099acb55efabd ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:3e9eef07994fad9465c1153f8dc4236ffe5e429de5cb04894628149490313a8a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:3693466ee7feac15e60880b990dd82db800b712ffb74d362d41b1c3a05f232f2 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:32e7bf6f410d744263ee58699b4a867f859af6f3ee869ab12c5b1c6dc914b45a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:41200f56aaa1b54db11a0b6a0c34215b4b10346128ca868f1d9463d5bb5f9962 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:444d9c5c0cd356af780a08aaa59d6c38614fba6c1097236761edab12ecda1c31 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:3d5ab5c9ddf8d90ecd41d901c35f394516a7ecc636eaae5cadd09493982be30d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:464253a7de3c6a5050c71c3eee8cea73f15e2d0172ced0cf1ac23c0e6b9e8543 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:4a28953cf75efe8546435af665c38bfbd6e9abcd7d3bc58a45dd8ac2449c0892 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:4bf8bae981c86d683d3673d081a7fc4ab0a7cd1e1cebc4b2505cc7431fd722ba ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:496fb39bdaa8dfec2ceef1bd6cc2323839d14f45508df9a7eab61f0d77a6b9f4 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:486d368464ea905d2af0236ab4f5323b5c9316119ef7bd35bb092980206ef925 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:4d0051234fce141ad195b9df016d6d0f507b1505db2aca9872c7bd242ebfe1b0 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:4c41df40dd4b4988ad3d808aafb890ce55ec20ad795681a66228053946692067 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:58772c8d558f1611f95e2e7fbc97f8bfe366cc0e7cd5d5d3c368df7da39d2d62 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:58cfa14074a1d1bd75b6d60b5d111b80a07b67db283023581fc14f4037f5983a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:598898e3bf4cdfa901366cd6a79e549467ad678729b344e7f1d0bfe5fd010cc8 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:42c7b513273910de5659dcd2d76c7087600b9d711c55428cbf3d970add246f25 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:5678ad20c4cbc58846296548644cb39c3e8b5e6d517cd541de6d8fd598c888cf ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:599110985a4f9cdd7e7f1a19c52cac74b04e9db6790cbf3b2064886a7e82a788 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:5bdee1813163ac3ca127f6d220bcc1004989cf631162b4d6b443f6679236edb6 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:5c9a89a0406e6293a6e5c72892e63114c97fdee9e1052ec66429b94a49c915b5 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:5ae33263f6c10264c8e213b60fde00d52c6f5be4c2be66fad9a58095e54d634e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:5f74bee8051a7fd3ba3dd00866a24275ac86ecae33731aa27e0487f578d307d8 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:5fce965d60dfcec37dfceb0a25ee455a3e014a5bf6c6ac0b754708af9142e89e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:63524b319c7b316125c6cb358939d99eb08cc0d58e2de5f889820f8d8419e244 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:63d142422487dfb3880514848a894b04796454c31cb9910e30dd3dc943e8e903 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:63ee9055ddf3dc2e6ff8b81bb29a788e8489f172891f4b252b6ad082af1aa3fa ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:6b767b02feae275ae45d5005be0ba35693ea5acd7ce73e3d3d7834e06f84229f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:61b02e5100001c3dca0ad38d230cf035ddc6532dec4e1c9d30e376c7bee49beb ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (4s)  ocp-v4.0-art-dev@sha256:4ef6442d9fca94fe8e2b43ce89e6c6dcd4a65db082917fd10817a41d37855335 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:6e4ca544f6167ad5639f93c5701f5982a79cfad0f3d0c108d63608723c998f8d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:6d52a25e49786c9043442438ac737c6ffbf670c625cb11131790f5672249b29d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:712e9bf7e729c05639d4365deca1070b013e2c4291321e6ebc85e3f625c2afda ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:6b8bfaf02530c869a8892c42b6b106b29ce3ca65184a8a659f290b022d6e8e02 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (4s)  ocp-v4.0-art-dev@sha256:5b7020b70933c66d43cb08f32a46997d64ea7b25a1b6524f70f53f9ce662f3b1 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:79c0e07174ca9c71294e2ed80abcf93011bd05a37a29c8693ee57c7e0368ecfc ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:728749e9ee943024b3f1cc5c8c53a56e386fadba72c5c3f2252ff63a88972754 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:7cbea0a8da2ddfc45c94eca0f601c255ec7d4639414c6669cd43ee9106b73744 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:77c60fc1e87e04d8047f50bd881b31baf552865de7c64268ab3682a70b78b2e6 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:7d3b3264b1a97562b46206d0426a316bce36b72dda88ffbcdccfb0854b2f944e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:830a22923269da907cfb4f2209cf17338d7988d2b885a5a19af0beecee8a03c3 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:732221a8ddcde987587f466d076f46568d7f26d274d4cc2955a6e919ec1fcf46 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:847572dfdbe0fcc38aafded8f902c11ebf87c2cdfd424afb59898b5f5ec415de ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8689a6eefb1c47f34877fc11b1450c39963322fc7406f6abefda62eb854184f9 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:86d46e371f78b34fe3052ccb1d3b7b9c5a7f6a8e73cdccf133bbc654c4e636aa ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:7d9fb64c145a02261751c95471476d42b6b27c7c7c206a9bcf239da05668923f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:87726f5623c590fac87edf1dc18c7da0edfc74f4ff6f615237a2cc915bc54758 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8c8cf3bae88cab7933b78d88a36461299e4c3e8a8f42fa1931c63ad51ae06bf0 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:850b4b6cbb30c012f62bd44ca1f00afa90241ef16df1c929a4e738a4e5214069 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8e7f72432718927cc4f23708232f77731d54f4336d61dee559f4f6cfad4333e4 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8ee9d7516f41cf049d5022e3949351ef3418e8c450aeda1bf822c01b2facd767 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8dbf26b640655cb46dd1027e9580133cfdfd2dee35f14b1fd5f2792c059fbcf6 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:882fabd2b1bc04be0e5e3181385bc6694cca4ff9ba17dd06b7616ba4ee0bec95 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8f3c1e1c2bff65967e37b40271740e2ec40064b36c3e82c2b80eadbaf24a4995 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:8efdb0280a6414f30d4ab78a461545d6ed9bbc5dddd9c43965d4f580ded2ab52 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:91ec5a95ed9afe5f802b2e917860a30152f9dbd1bc3f386bc52a302d2b1f12e3 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:91f9ff3ea5f09f3af2846b5cd0abba741e5a12ace8abbec92f4d1e8651cbfa4d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:92b20c5a1c6f7036c0b4ab95a1c24187a471369fadf0e77a557868dceeb940fe ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:936fffb95dda610a73791b1eee931b2db33c1a4e7988ec717bf49bcb156b66ea ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:9120137405ed7426b3cd3524f19511a1c26cba50e1d4f867ee85480a820b0581 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:901d81317ab0e857b794cd72ce31bdcd847499290fca7985a0a5d04aeaaf7be8 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:93799cfa6543418535f8e8eb621dad3768dd9ebc74a999c7357a5886f9a0874b ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:95e5159e10fa1dbafe69b729173692327f118c297d87406905a510b0b79d5061 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:9583ffe3fe4ac3b0b6cbdeb00a96aa9963236b76814bb78ac860066adfb1042e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (3s)  ocp-v4.0-art-dev@sha256:88a944f1ead5e428fb03d30e51f0d5d14991257a7e9ab6ae25566f69f2a77980 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a08642881027a7418c62cd372fda100cb632f00e72cb1f335ff0830746c26e8f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a29004791be49c9acdd94bafe03e811318abbef5d3cd91084d6a3f2047dc2239 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:9f7232ece747d17007c6a09da32b00be882aab9cecd76fe2656bf7c400e54940 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a3743fd242f8b6ebd0c50935d615ed802b0fbc68d38058e820fd9683b29f5387 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a4355e9b6a76b28799a17f089da2bb8108dba5a5b45ef3857416073f6ca5160b ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a77eed06fe58770385b66f60ef99c18f0553f2ce33691ec4f9d61189f898af3e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a3daaa40ce9cca26f36bfa48b3a5d952e506d50281fb1ce867ec1068bc2387b4 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:a8c418c5fc5fd1784b4db2a8c38d73c610624ed317d5847511d765f21d17b50c ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:ab8dc6d8e30ef45c31d418718e17f1f5a500fa672a693058d61047a28a04adbd ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:9ecdf08e88dbb3db829a979cc43f266eb46154da64a078122bfdb36f466eb353 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:ad6a1e30357a4cca8d695e6e53659dca29bd917a1dab4a1cc0ccb1004aa8d650 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:ab429bde31121f147b124581f40770d59b0112efe19e4de460a13b31f64aff7e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:acba2cdb10bf0613e68782985b6cb1620ff6a9f9559cf2627ba1d9f5ba14b0ef ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b18391e76bca408acacec5f3a0da267fdd43cd76d5a5423ae9f7a0f1585f9c17 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b2f8c723b4f92aa7bbc9056ba82637d961f81e822dc92187ebaece02540ca635 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b371d1dcd1736c2de342621b511b782a1cacbcbacb3258d85e188f1c399281c4 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b3e739210d802eef420a1674582843ef8d49d5a01b655d959a50be4c3f38098d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b684eab86a5d662aea29e08af0af895664887c9d797cb248a277ba725c7dbaf0 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b761f8b309be821bfebfa1aa3f4fe453d48dfea4a6bfd04dfb789e2f86210b82 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:b33e8241bc6ee11b92aa878e6ea61d829500ec9c31d9a39a74a5dd0955ebc747 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:b7fdbf11aa67fab88d91ee826d9734ae45d639e918af1141667484aee9932e27 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:b1d26a296f7030737a14e198a7c83a7d8720dad1d2b2ffaeaf7cbdbde274da78 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (4s)  ocp-v4.0-art-dev@sha256:9c4957b0b110d87ba807c06e3953b6ba42f22043a417d70139406eaa5fde3003 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:baf248462cfb2ed6478e08f98e7f5f5bba7e2a32bcdbc3fcf7f2ace9996dae27 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:bbb2e0789e20135ac29a0b00006240a38eb7b0573994f84fdbd2d81f158e57c9 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:bcea2057d309920e234cfb7662ef436f0a51e00df7b7a30c6241f3e7937f681b ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:b9725e9357c3e475aa04a360ec530cd3758f64e6de38a1f039279ab2b12c50e5 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:b809bcafba6df0a3cd087237986a735b011a9627917ece06af5d64968210d62d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:be06d55c6b902ef0ad5d9f3be98bb14d912f92d2f52bee4cc8172508f0fa4b92 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c1f9b9387e561a80060d946104efafb9f63b92214234b4e28adda1dee379d217 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c3230c6c0fc673d0b7bdc8f4e594b05a1db1d153ba2e0facaca4f5169cf45e77 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c483b492964e2123a0e3f49ef594a20717a855d054958eac06ce5eb58ac1d1d9 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:b9b7750d5256aede9209282556ccf035ff3403d74d9d3e0bfd42043cb0cf4394 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:c0a870d02ac40e4d32d994f242bd3b8a879ea813c9889d9f73e51fb4642eca4a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c542865189febfbdc5d5d5cd44bd16459ece137e1afc4f27356def4babe1b0c9 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c6585658afb400d458c47e1037a2dc3c5dd9be1345a4d4f2010b8ce55ceaa788 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c5ad1d6896d441de217328ab5f2d5db8d99323d06ccdb2768b3d3f1f276905df ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c92827998c01d5f9d984c7e98efa18b5fac13800e21bfc3ef8ecacdf5214b11c ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c86b26b0f79a7a23c774d83535d1d924241eb5b51395c78bc7423ee96206fe28 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:cae73b79a4b02a678c265c548b045088b6ad36c0cd3bdf0467d4c611e50f40ec ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:c500fa4dea1018408dbf028678e0be9e98f2f9368dc930f57f7ec6be6aaaff16 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:cecde5c04b7ada6a15a227fd60c7c727cb60d85c43feb0a7b172c61d9ee44d33 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:c988300b8186780a82936d5f9fb9f46dfca655c2dc9872a04254936b7df67585 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:be7f34ca43765e376ce0d53b2e4333653dde3921271cdc61c8a0ba0b1cf58891 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:d14dd002c20704e4317d579659c9982f6c5f484358a9a69025b323341b28ed63 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:d2b1bbd58cf1c29086f2bd851ba02d825757ce366500b0727b0ab93fa6bc990f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:d52897434013ad642d5386dcf0ddd869b2a8055eec09f34252403200d57bfc7a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:d2c01136362cd3f42039f9d9c5fd8bc24810eafa36b09c44910a9f03a0be26c5 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:d404e0c139df16254fb2f2ce5afee6ee80e7f8b1c64d92eb7b75aa536c0dc81f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:da3d8a53cfb30eb458b1afbc9b7acd43f1a65d37e6df1181a38a41a97d822e29 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:d9f37136613eba05fc10d88d8bc39aa4a24d9c270262e01601a1c66633830088 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:ceafd31baa10be5fbb6fa36b0045da91a21f767611f269f0320ab2671a8e948f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:e013eccf0c036c99f6452732c2b1f8f14e4b2da36d8d0b5a96c7b9eae724835f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:e072bb2ce2ef0a25dc67ab89fa28885293ac3fd70462bb6232b6af851288aa22 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:d9b02804ef495a3a1da07514571ebf3671429e2f922490f088f880220f10f36e ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:e196049f1babedff9ae41668e039d16ec39d113653e55d5df072cfbf221f4a23 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:dd5f9ebd5ac74d8b47769f404bce62fc5b1b5f9104b40daae372388014ba80d8 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:e34b550e9431f632547991452b0ce92e5de3258b40736f936cfc3d6c031bff5c ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:df47b858dbc4cb9280366576110d5ae4f310499bea15c058196bb5be4405cf77 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:ed32344c344a366531a0cf8fe896597bd9acef4fe7c60dae675d86de9427063a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:ef8ea59846f43d1ff80aae23f3985b3d856ad8e9c5850f9f325d75a79912591f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:ea23956f2e88c5940b3e20c7972ad5e3c8e2e7de880f43a006a5c51b5a6b01ec ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f277dc9e1ad6c69f406661d47e14a5de0564250f9f4e53c3ff1a43985e5083da ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f14715da3f144655e3f6c089f67c53ce62748af32425b9fe4c76b72d9783c25c ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:eec6f9a07588d81c88b8cbb72926506385c756a3559c5955efe9b1bcf25de8ed ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f484d1e16a76f8e52ca2c411a74d34bb74ec0bb8778656df68411ef4c002760d ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f54a9fa27b033491b993535e2681aac3907721edae80f5e4a4339dbf32f31105 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f43bc9bea5872f01986eef4b3db4a434d3b168c8d28244038914d3d7235ebbba ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f73f890b42b1d6020a9813c82a3553b7419cc614f2f9c233095ed57ee0c51c9a ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:e0dacae42266e4d0950f4fe3c54576ae7cf4e8ed9d1dbc05c3c3f85ed4fab254 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f85ba431df60ca09ab888269226c63ad7db53d1860701a2cf3ed003dd19231df ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f81890a777de1d979aab92e5b62de94ab38246ba75b7e5cab32da3f2bf01e57f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f936f02f85169cc3ecfc35e305956e96b2f1ca46f685f1e7f77993f5ccfc361f ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f9d58fa23e05d8147af1dce5025ff625643115cf9ff7a9707c99858cdc6a74bd ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f9053f64d7100b7fd96e39b682e9359ffaba864aed9635ca88e9af8cceec5e92 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:f7996109edec0704fddc0e3d2996a4654eaecf2175d372a521976c31d771bd81 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:faf9d8ef4d000c8bfd5cab2417d9ef78f0258329ea80c798d66f663dbf712e00 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:fcb955aee1a4ae973628fd392ca4513204302dc587fa4b23f9f2e59fd848e545 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:fe743e32875271e5847989cd83e05fd85c7ca2862251fda6757e3ec9d9e8f815 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:f9e9700bb616b337fbf1086fc94b9854907919314be4e960fd73d4f9d5923704 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (2s)  ocp-v4.0-art-dev@sha256:f42dc41f7fc0ef4717a787fdcda82078d66f20d2f6a8df6b59a193d0575d8828 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:fff262d7e4a1bae77ff3d0779d36505804c369ef6bc2698f21a3e1e7ce75f723 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-v4.0-art-dev@sha256:fee1851cbd515a8d68993aa1ee3a6d7dfb5b6b42742608545948adbf47595907 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  graph-image:latest ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+ ✓   (0s)  ocp-release:4.19.21-x86_64 ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+191 / 191 (44s) [===========================================================================================================================================================================================================================================] 100 %
+ ✓   (1s)  ocp-v4.0-art-dev@sha256:fab7f2f8db95fbf3d79be90d82bc3c041b629aea9576c0dfdc517456a00c530b ➡️  artifactorye.home.local:443/gitops/dev/openshift/  
+2026/01/20 17:51:36  [INFO]   : === Results ===
+2026/01/20 17:51:36  [INFO]   :  ✓  191 / 191 release images mirrored successfully
+2026/01/20 17:51:36  [INFO]   : 📄 Generating IDMS file...
+2026/01/20 17:51:36  [INFO]   : /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/working-dir/cluster-resources/idms-oc-mirror.yaml file created
+2026/01/20 17:51:36  [INFO]   : 📄 Generating ITMS file...
+2026/01/20 17:51:36  [INFO]   : /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/working-dir/cluster-resources/itms-oc-mirror.yaml file created
+2026/01/20 17:51:36  [INFO]   : 📄 No catalogs mirrored. Skipping CatalogSource file generation.
+2026/01/20 17:51:36  [INFO]   : 📄 No catalogs mirrored. Skipping ClusterCatalog file generation.
+2026/01/20 17:51:36  [INFO]   : 📄 Generating Signature Configmap...
+2026/01/20 17:51:36  [INFO]   : /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/working-dir/cluster-resources/signature-configmap.json file created
+2026/01/20 17:51:36  [INFO]   : /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/working-dir/cluster-resources/signature-configmap.yaml file created
+2026/01/20 17:51:36  [INFO]   : 📄 Generating UpdateService file...
+2026/01/20 17:51:36  [INFO]   : /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/working-dir/cluster-resources/updateService.yaml file created
+2026/01/20 17:51:36  [INFO]   : mirror time     : 1m0.275635262s
+2026/01/20 17:51:36  [INFO]   : 👋 Goodbye, thank you for using oc-mirror
+Copie dans un autre repertoire car le contenu du workspace ie working-dir est ecrase au prochain sync de 4.19
+Patch configmap mirrored-release-signatures: /home/elimane/Techs/openshift4/baremetal/elimane-hub-and-spoke/ahcu/oc-mirror-v2/4.19/dev/working-dir/cluster-resources/signature-configmap.yaml
+Copier le resultat dans osus/templates ou determiner comment 4.19+ le consomme
+Stager le repertoire suivant dans GIT: 4.19/dev/20260120175036 pour verif history futur
